@@ -3255,7 +3255,7 @@ int
 fluid_synth_sfreload(fluid_synth_t* synth, unsigned int id)
 {
   char filename[1024];
-  fluid_sfont_info_t *sfont_info, *old_sfont_info;
+  fluid_sfont_info_t *sfont_info = 0, *old_sfont_info = 0;
   fluid_sfont_t* sfont;
   fluid_sfloader_t* loader;
   fluid_list_t *list;

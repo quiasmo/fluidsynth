@@ -273,12 +273,16 @@ void handle_signal(int sig_num)
 }
 #endif
 
-
 /*
  * main
  */
 int main(int argc, char** argv)
 {
+#ifdef WIN32
+	auto hModule = GetModuleHandle(NULL);
+	fluid_set_hinstance((void*)hModule);
+#endif
+
   fluid_settings_t* settings;
   int arg1 = 1;
   char buf[512];
