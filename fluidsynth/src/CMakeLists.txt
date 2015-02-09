@@ -263,7 +263,8 @@ if ( MACOSX_FRAMEWORK )
         INSTALL_NAME_DIR ""
         VERSION ${LIB_VERSION_INFO}
         SOVERSION ${LIB_VERSION_CURRENT}
-    )
+        MACOSX_RPATH ON
+     )
 elseif ( OS2 )
     set_target_properties ( libfluidsynth
       PROPERTIES
@@ -279,7 +280,8 @@ else ( MACOSX_FRAMEWORK )
       OUTPUT_NAME "fluidsynth"
       VERSION ${LIB_VERSION_INFO}
       SOVERSION ${LIB_VERSION_CURRENT}
-  )
+      MACOSX_RPATH on
+      )
 endif ( MACOSX_FRAMEWORK )
 
 if ( LIBFLUID_CPPFLAGS )
